@@ -18,6 +18,19 @@ int main(){
      vec.push_back('r');
      vec.push_back('t');
      cout<< vec.capacity()<<endl; 
+    
+     vector<int> a={1,2,3,4,5};
+
+     //vector<int>::iterator i;
+     for(auto 
+      i=a.begin();i!=a.end();i++){
+      cout<<*(i)<<" ";
+     }
+     cout<<endl;
+     // vector<int>::reverse_iterator j;
+     for(auto j=a.rbegin();j!=a.rend();j++){
+      cout<<*(j)<<" ";
+     }
      //for(char val:vec){ //for each loop
       //  cout<<val<<endl;
     //}

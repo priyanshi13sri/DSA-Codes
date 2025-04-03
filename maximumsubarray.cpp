@@ -1,3 +1,5 @@
+            //KADANE'S ALGORITHM
+
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -15,5 +17,6 @@ int main(){
         }
     }
     cout<<maxSum;
+    
     return 0;
 }
