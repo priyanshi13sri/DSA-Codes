@@ -8,10 +8,6 @@ void f(int n, int i){
     return;
     f(n,i+1);
     cout<<i<<endl;
-    
- 
-  
-
 }
 int main(){
 
