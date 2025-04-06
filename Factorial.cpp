@@ -15,3 +15,5 @@ int main(){
 
     return 0;
 }
+
+// time complexity- 0(n)
