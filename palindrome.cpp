@@ -8,8 +8,10 @@ using namespace std;
     return f(i+1,s);
  }
 int main(){
+    string s;
+    cout<<"Enter a string: ";
+    cin>>s;
     
-    string s="madam";
-    cout<<f(0,s);
+    cout<<(f(0,s) ?"Palindrome" : "Not Palindrome")<<endl;
     return 0;
 }
