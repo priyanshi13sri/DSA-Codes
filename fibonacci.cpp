@@ -16,3 +16,4 @@ int main(){
     cout<<f(n);
     return 0;
 }
+//time complexity--->2^n
