@@ -23,5 +23,34 @@ bool isEmpty(struct Stack *stack){
 void push(struct Stack *stack,int value){
     if(isFull(stack)){
         printf("Stack Overflow\n",value);
+    }else{
+        stack->items[++stack->top] =value;
+        printf("pushed %d onto the stack.\n",value);
     }
+}
+
+void pop(struct Stack *stack){
+    if(isEmpty(stack)){
+        printf("Stack is empty.\n");
+        return -1;
+    }else{
+        return stack->items[stack->top--];
+    }
+}
+
+int main(){
+    printf("1.")
+    printf("Enter your choice:");
+    scanf("%d",&choice);
+    switch(choice){
+        case 1:
+        printf("Enter value tp push: ");
+        scanf("%d",&value);
+        break;
+        case 2:
+        value = pop(&stack);
+        if(value!= -1)
+    }
+
+    return 0;
 }
