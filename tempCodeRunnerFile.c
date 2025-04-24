@@ -5,11 +5,9 @@
 int queue[MAX];
 int front = -1, rear = -1;
 
-// Function Definitions
-
 void enqueue(int value) {
     if (rear == MAX - 1) {
-        printf("Queue Overflow! Cannot enqueue more elements.\n");
+        printf("Queue Overflow! Cannot insert more elements.\n");
     } else {
         if (front == -1) front = 0;
         queue[++rear] = value;
@@ -19,12 +17,11 @@ void enqueue(int value) {
 
 void dequeue() {
     if (front == -1 || front > rear) {
-        printf("Queue Underflow! Nothing to dequeue.\n");
+        printf("Queue Underflow!\n");
     } else {
         printf("Dequeued: %d\n", queue[front++]);
     }
 }
-
 void peek() {
     if (front == -1 || front > rear) {
         printf("Queue is empty.\n");
@@ -33,11 +30,12 @@ void peek() {
     }
 }
 
+
 void display() {
     if (front == -1 || front > rear) {
         printf("Queue is empty.\n");
     } else {
-        printf("Queue elements (front to rear):\n");
+        printf("Queue elements:\n");
         for (int i = front; i <= rear; i++) {
             printf("%d ", queue[i]);
         }
@@ -45,12 +43,10 @@ void display() {
     }
 }
 
-// Main Function
-int main() {
-    int n, value, choice;
+int main(){
 
-    // Initial input from user
-    printf("How many elements do you want to enqueue initially (max %d)? ", MAX);
+    int n, value, key;
+    printf("Number of elements to be inserted (max %d)? ", MAX);
     scanf("%d", &n);
 
     if (n > MAX) {
@@ -64,39 +60,39 @@ int main() {
         enqueue(value);
     }
 
-    // Menu-driven operations
+   
     while (1) {
-        printf("\n--- QUEUE MENU ---\n");
+        printf("\n QUEUE MENU \n");
         printf("1. ENQUEUE\n");
         printf("2. DEQUEUE\n");
-        printf("3. PEEK (FRONT)\n");
+        printf("3. PEEK \n");
         printf("4. DISPLAY\n");
         printf("5. EXIT\n");
-        printf("Enter your choice: ");
-        scanf("%d", &choice);
+        printf("Enter your key: ");
+        scanf("%d", &key);
+    
 
-        switch (choice) {
-            case 1:
-                printf("Enter value to enqueue: ");
-                scanf("%d", &value);
-                enqueue(value);
-                break;
-            case 2:
-                dequeue();
-                break;
-            case 3:
-                peek();
-                break;
-            case 4:
-                display();
-                break;
-            case 5:
-                printf("Exiting program.\n");
-                exit(0);
-            default:
-                printf("Invalid choice! Please try again.\n");
-        }
+    switch(key){
+        case 1:
+        printf("Enter value to enqueue: ");
+        scanf("%d", &value);
+        enqueue(value);
+        break;
+        case 2:
+        dequeue();
+        break;
+        case 3:
+        peek();
+        break;
+        case 4:
+        display();
+        break;
+        case 5:
+        printf("Exiting Program.\n");
+        exit(0);
+        default:
+            printf("Invalid key!\n");
     }
-
+}
     return 0;
 }

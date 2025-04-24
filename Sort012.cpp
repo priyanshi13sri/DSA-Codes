@@ -8,7 +8,7 @@ void printArray(int arr[],int n){
     cout<<endl;
 }
 void SortOne(int arr[],int n){
-    int left=0,right=n-1;
+    int left=0,right=n-1,middle=left+1;
     while(left<right){
         while(arr[left]==0 && left<right){    
         left++;
@@ -26,7 +26,7 @@ void SortOne(int arr[],int n){
 
 }
 int main(){
-  int arr[8]={1,1,0,0,0,0,1,0};
+  int arr[8]={1,1,0,2,2,0,1,0};
   SortOne(arr,8);
   printArray(arr,8);
     return 0;
