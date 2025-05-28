@@ -19,6 +19,7 @@ int main(){
    node3->data=30;
    node2->next=node3;
    node4=(struct node*)malloc(sizeof(struct node));
+   
    node4->data=40;
    node3->next=node4;
    node5=(struct node*)malloc(sizeof(struct node));
