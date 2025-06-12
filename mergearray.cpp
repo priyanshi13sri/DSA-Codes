@@ -17,7 +17,7 @@ void mergeArray(int arr1[], int size1, int arr2[], int size2, int merged[]) {
 
     while (j < size2) {
         merged[k++] = arr2[j++];
-    }
+    }/
 }
 
 int main() {
